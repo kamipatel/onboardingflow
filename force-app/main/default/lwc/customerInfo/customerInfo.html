@@ -1,0 +1,74 @@
+<template>
+
+        <div class="addressSection">
+            <div class="slds-size_1-of-1 slds-grid slds-wrap">
+            <div class=" slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                <b>Customer Information</b>
+            </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap">
+                    <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                        <lightning-input onchange={handleFirstNameChange}
+                            name="FirstName" value={firstName} label="First Name">
+                        </lightning-input>
+                    </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+                    <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                        <lightning-input onchange={handleLastNameChange} name="Last Name"
+                            value={lastName} label="Last Name" >
+                        </lightning-input>
+                    </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+                    <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                        <lightning-input onchange={handleEmailChange} name="Email"
+                            value={email} type="email" label="Email" 
+                            ></lightning-input>
+                    </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+                    <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                        <lightning-input onchange={handleAddressLine1Change}
+                            name="addressLine1" value="addressLine1" label="addressLine1"
+                            ></lightning-input>
+                    </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+                    <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                        <lightning-input onchange={handleAddressLine2Change}
+                            name="addressLine1" value="addressLine2" label="addressLine2"
+                            ></lightning-input>
+                    </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+                    <div>
+                        <lightning-input  onchange={handleCityChange} name="city" value={city}
+                            label="city" ></lightning-input>
+                    </div>
+                    <div class={cityStateClass}>
+                        <lightning-input  onchange={handleStateChange} name="state"
+                            value={state} label="state"></lightning-input>
+                    </div>
+            </div>
+        
+            <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+                    <div >
+                        <lightning-input onchange={handleCountryChange} name="country"
+                            value={country} label="country" ></lightning-input>
+                    </div>
+                    <div>
+                        <lightning-input  onchange={handlePostalCodeChange}
+                            name="postalCode" value={postalCode} label="postalCodeLabel"
+                            ></lightning-input>
+                    </div>
+            </div>
+        </div>
+
+</template>
