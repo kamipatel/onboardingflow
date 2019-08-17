@@ -10,8 +10,9 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen" category="Plan category">
-            <property name="planType" type="String"/>
-            <property name="plans" type="String"/>
+            <property name="pricebookEntry" type="@salesforce/schema/pricebookEntry[]"/>
+            <property name="selpe" type="String"/>            
+            <property name="peList" type="apex://ProductInfo[]"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

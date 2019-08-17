@@ -1,17 +1,21 @@
 <template>
 
-<template for:each={differentplans} for:item="plan">
-    <lightning-card title="" icon-name="custom:custom14" key={plan.PriceBookId}>
-        <ul class="slds-m-around_medium">
-            <li >
+    
+    
+    <lightning-card title="Plans" icon-name="custom:custom14">
 
-                    <lightning-input type="checkbox" label={plan.Description} name={plan.PriceBookId} ></lightning-input>
-                    {plan.Price}
+    <template for:each={peList} for:item="pe">
+        <lightning-card title="" key={pe.PriceBookId}>
+            <ul class="slds-m-around_medium">
+                <li >
+                        <lightning-input data-id={pe.PriceBookId} type="checkbox" label={pe.productName} name={pe.PriceBookId} onclick={handleClick}></lightning-input>
+                        {pe.description}- ${pe.price}/Month
+                </li>
+            </ul>
+        </lightning-card>
 
-            </li>
-        </ul>
+    </template>
+
     </lightning-card>
 
-</template>
-
-</template>
+    </template>

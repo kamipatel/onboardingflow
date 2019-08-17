@@ -1,7 +1,22 @@
 sfdx force:auth:web:login -d -a devhub
+kamlesh.patel-iynd@force.com
 
-sfdx force:source:retrieve --manifest ./manifest/package.xml
+sfdx force:org:create -f config/project-scratch-def.json -d 30 -a so
+test-wi1qtkddqp6p@example.com
 
+sfdx force:source:push -u so
+
+sfdx force:org:open  -u so
+
+sfdx force:source:pull -u so
+
+
+sfdx force:source:retrieve --manifest ./manifest/package.xml -u devhub
+
+sfdx force:source:deploy -m LightningComponentBundle -u devhub
+sfdx force:source:deploy -m ApexClass -u devhub
+
+sfdx force:source:deploy --manifest ./manifest/package.xml -u devhub
 
 # Salesforce App
 

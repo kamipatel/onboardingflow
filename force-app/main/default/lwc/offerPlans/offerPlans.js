@@ -1,10 +1,15 @@
 import { LightningElement, api, track } from 'lwc';
 
-export default class OfferPlans extends LightningElement {
-    @api planType;
-    @api plans;
 
-    @track differentplans = [
+
+export default class OfferPlans extends LightningElement {
+
+    @api pricebookEntry=[];
+    @api products=[];
+    @api selpe;
+    @api peList;
+
+    @track plans = [
         {
             PriceBookId: '01tB0000000PBTtIAO',
             Name: 'FinancialResearchDigitalMonthly',
@@ -26,9 +31,10 @@ export default class OfferPlans extends LightningElement {
     ];
 
     handleClick(event) {
-        window.console.log("event.target=" + event.target);
-        window.console.log("event.target.id=" + event.target.id);
-        window.console.log("event.target.value=" + event.target.value);
-        window.console.log("event.target json=" + JSON.stringify(event.target.id));
+        window.console.log("event.target.dataset=" + JSON.stringify(event.target.dataset));
+
+        this.selpe = event.target.dataset.id;
+        window.console.log("Plan handle click done, this.selpe=" + this.selpe);
+
     }
 }

@@ -5,6 +5,21 @@
         "paths": {
             "c/creditCardInfo": [
                 "creditCardInfo/creditCardInfo.js"
+            ],
+            "c/customerInfo": [
+                "customerInfo/customerInfo.js"
+            ],
+            "c/offerPlans": [
+                "offerPlans/offerPlans.js"
+            ],
+            "c/onboardSummary": [
+                "onboardSummary/onboardSummary.js"
+            ],
+            "c/StripePay": [
+                "StripePay/StripePay.js"
+            ],
+            "c/stripePay": [
+                "stripePay/stripePay.js"
             ]
         }
     },
