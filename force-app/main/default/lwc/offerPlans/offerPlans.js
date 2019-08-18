@@ -1,7 +1,6 @@
 import { LightningElement, api, track } from 'lwc';
 
 
-
 export default class OfferPlans extends LightningElement {
 
     @api pricebookEntry=[];
@@ -34,6 +33,9 @@ export default class OfferPlans extends LightningElement {
         window.console.log("event.target.dataset=" + JSON.stringify(event.target.dataset));
 
         this.selpe = event.target.dataset.id;
+
+        this.dispatchEvent(new CustomEvent('FlowNavigationNextEvent'));
+
         window.console.log("Plan handle click done, this.selpe=" + this.selpe);
 
     }

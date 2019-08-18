@@ -11,6 +11,15 @@
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen" category="Customer Info category">
             <property name="addressRequired" type="boolean"/>
+            <property name="firstName" type="String"/>
+            <property name="lastName" type="String"/>
+            <property name="email" type="String"/>
+            <property name="addressLine1" type="String"/>
+            <property name="addressLine2" type="String"/>
+            <property name="city" type="String"/>
+            <property name="state" type="String"/>
+            <property name="country" type="String"/>
+            <property name="postalCode" type="String"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
