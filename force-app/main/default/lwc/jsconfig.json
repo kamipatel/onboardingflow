@@ -14,12 +14,6 @@
             ],
             "c/onboardSummary": [
                 "onboardSummary/onboardSummary.js"
-            ],
-            "c/StripePay": [
-                "StripePay/StripePay.js"
-            ],
-            "c/stripePay": [
-                "stripePay/stripePay.js"
             ]
         }
     },
