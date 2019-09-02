@@ -6,8 +6,15 @@
     </div>
 
     <div class="slds-size_1-of-1 slds-grid slds-wrap">
+        <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+            <b>{error}</b>
+        </div>
+    </div>
+
+
+    <div class="slds-size_1-of-1 slds-grid slds-wrap">
             <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
-                <lightning-input onchange={handleCardHolderNameChange}
+                <lightning-input 
                     name="CardHolderName" value={cardHolderName} label="CardHolder Name">
                   </lightning-input>
             </div>
@@ -15,7 +22,7 @@
 
     <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
             <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
-                <lightning-combobox onchange={handleCardTypeChange}
+                <lightning-combobox 
                     name="cardType" value={cardType} label="Card Type" options={cardTypes}
                     >
                 </lightning-combobox>
@@ -24,34 +31,46 @@
 
     <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
         <div class={cardNumberClass}>
-            <lightning-input onchange={handleCardNumberChange}
-                name="cardNumber" value={cardNumber} label="cardNumber" 
+            <lightning-input 
+                name="cardNumber" value={cardNumber} label="cardNumber" onchange={handleChange}
                 >
             </lightning-input>
         </div>
             <div class="slds-form-element slds-size_1-of-3 slds-p-horizontal_x-small">
-                <lightning-input onchange={handleCvvChange} name="cvv" value={cvv} 
-                    label="cvv" type="password" ></lightning-input>
+                <lightning-input  name="cvv" value={cvv} 
+                    label="cvv" type="password" onchange={handleChange}></lightning-input>
             </div>
     </div>
 
     <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
             <div class={expiryMonthYearClass}>
-                <lightning-combobox onchange={handleExpiryMonthChange}
+                <lightning-combobox 
                     name="expiryMonth" value={expiryMonth} label="expiryMonth"
-                    options={expiryMonths} > </lightning-combobox>
+                    options={expiryMonths} onchange={handleChange}> </lightning-combobox>
             </div>
             <div class={expiryMonthYearClass}>
-                <lightning-combobox onchange={handleExpiryYearChange}
+                <lightning-combobox 
                     name="expiryYear" value={expiryYear} label="expiryYear" options={expiryYears}
-                   > </lightning-combobox>
+                    onchange={handleChange}> </lightning-combobox>
             </div>
     </div>
+
+    <br/>
 
     <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
             <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
-                <lightning-input onchange={handleSaveForFutureChange} name="saveForFuture" value={saveForFuture}
+                <lightning-input  name="saveForFuture" value={saveForFuture}
                     label="saveForFuture" type="checkbox"> </lightning-input>
             </div>
     </div>
+
+    <br/>
+
+    <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+        <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+            <lightning-button variant="brand" label="Next" title="Next" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </div>
+
+
 </template>

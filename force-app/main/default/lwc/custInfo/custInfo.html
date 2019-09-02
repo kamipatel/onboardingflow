@@ -1,0 +1,41 @@
+<template>
+    <div class="slds-size_1-of-1 slds-grid slds-wrap">
+        <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+            <b>Your Information</b>
+        </div>
+    </div>
+
+    <div class="slds-size_1-of-1 slds-grid slds-wrap">
+            <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+                <lightning-input 
+                    name="firstName" value={firstName} label="First Name" onchange={handleChange}>
+                  </lightning-input>
+            </div>
+    </div>
+
+    <div class="slds-size_1-of-1 slds-grid slds-wrap">
+        <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+            <lightning-input 
+                name="lastName" value={lastName} label="Last Name" onchange={handleChange}>
+              </lightning-input>
+        </div>
+</div>
+
+<div class="slds-size_1-of-1 slds-grid slds-wrap">
+    <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+        <lightning-input 
+            name="email" value={email} label="Email" onchange={handleChange}>
+          </lightning-input>
+    </div>
+</div>
+
+<br/>
+
+    <div class="slds-size_1-of-1 slds-grid slds-wrap formElement">
+        <div class="slds-form-element slds-size_1-of-1 slds-p-horizontal_x-small">
+            <lightning-button variant="brand" label="Next" title="Next" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </div>
+
+
+</template>

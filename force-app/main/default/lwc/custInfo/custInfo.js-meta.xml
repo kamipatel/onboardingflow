@@ -9,11 +9,11 @@
         <target>lightning__FlowScreen</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__FlowScreen" category="Credit Card Info category">
-            <property name="validateCard" type="boolean"/>
-            <property name="amount" type="integer"/>
-            <property name="cctoken" type="integer"/>            
-            <property name="cardtoken" type="String"/>            
+        <targetConfig targets="lightning__FlowScreen" category="Customer Info">
+            <property name="firstName" type="String"/>
+            <property name="lastName" type="String"/>            
+            <property name="email" type="String"/>
+            <property name="fullName" type="String"/>                        
         </targetConfig>
-    </targetConfigs>
+    </targetConfigs>    
 </LightningComponentBundle>
